@@ -1,13 +1,8 @@
-﻿using System.Configuration;
-using System.Data;
-using System.Windows;
+﻿using System.Windows;
 
-namespace APA1;
-
-/// <summary>
-/// Interaction logic for App.xaml
-/// </summary>
-public partial class App : Application
+namespace MOVIE_APPLICATION_APA1
 {
+    public partial class App : Application
+    {
+    }
 }
-
