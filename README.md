@@ -18,8 +18,8 @@ This is a WPF-based application developed using .NET 9.0. It allows users to man
 - C# with LinkedList, Dictionary, Queue data structures
 
 ## Getting Started
-```bash
-git clone [your repo]
+```
+git clone Movie-Application-APA1
 cd Movie-Application-APA1
 dotnet restore
 dotnet build
