@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Windows;
 using System.Linq;
+using Microsoft.Win32;
+
 
 namespace MOVIE_APPLICATION_APA1
 {
@@ -84,6 +86,36 @@ namespace MOVIE_APPLICATION_APA1
             MovieGrid.ItemsSource = null;
             MovieGrid.ItemsSource = movieLibrary.MovieCollection.ToList();
         }
+        private void ExportJson_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog dialog = new SaveFileDialog
+            {
+                Filter = "JSON Files (*.json)|*.json",
+                FileName = "MovieLibrary.json"
+            };
+
+            if (dialog.ShowDialog() == true)
+            {
+                movieLibrary.ExportToJson(dialog.FileName);
+                MessageBox.Show("Movie list exported successfully.");
+            }
+        }
+
+        private void ImportJson_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog
+            {
+                Filter = "JSON Files (*.json)|*.json"
+            };
+
+            if (dialog.ShowDialog() == true)
+            {
+                movieLibrary.ImportFromJson(dialog.FileName);
+                RefreshMovieList();
+                MessageBox.Show("Movies imported successfully.");
+            }
+        }
+
 
     }
 }

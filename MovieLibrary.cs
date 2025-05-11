@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
+using System.IO;
 
 namespace MOVIE_APPLICATION_APA1
 {
@@ -135,6 +137,29 @@ namespace MOVIE_APPLICATION_APA1
                 }
             }
         }
+        public void ExportToJson(string filePath)
+        {
+            var movieList = MovieCollection.ToList();
+            var json = JsonSerializer.Serialize(movieList, new JsonSerializerOptions { WriteIndented = true });
+            File.WriteAllText(filePath, json);
+        }
+
+        public void ImportFromJson(string filePath)
+        {
+            if (!File.Exists(filePath)) return;
+
+            string json = File.ReadAllText(filePath);
+            var importedMovies = JsonSerializer.Deserialize<List<Movie>>(json);
+
+            if (importedMovies != null)
+            {
+                foreach (var movie in importedMovies)
+                {
+                    AddMovie(movie); 
+                }
+            }
+        }
+
 
     }
 }
