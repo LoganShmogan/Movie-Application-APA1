@@ -1,0 +1,74 @@
+[
+    {
+        "MovieID": "M011",
+        "Title": "Neon Skies",
+        "Director": "Julian Park",
+        "Genre": "Sci-Fi",
+        "ReleaseYear": 2021,
+        "Rating": 7.2,
+        "IsAvailable": true
+    },
+    {
+        "MovieID": "M012",
+        "Title": "The Glass Garden",
+        "Director": "Amelia Clarke",
+        "Genre": "Drama",
+        "ReleaseYear": 2016,
+        "Rating": 6.9,
+        "IsAvailable": true
+    },
+    {
+        "MovieID": "M013",
+        "Title": "Signal Lost",
+        "Director": "Kenji Matsuda",
+        "Genre": "Thriller",
+        "ReleaseYear": 2020,
+        "Rating": 7.5,
+        "IsAvailable": true
+    },
+    {
+        "MovieID": "M014",
+        "Title": "The Fifth Petal",
+        "Director": "Nora Benitez",
+        "Genre": "Mystery",
+        "ReleaseYear": 2018,
+        "Rating": 7.0,
+        "IsAvailable": true
+    },
+    {
+        "MovieID": "M015",
+        "Title": "Mech Town",
+        "Director": "Tony Waller",
+        "Genre": "Action",
+        "ReleaseYear": 2023,
+        "Rating": 8.1,
+        "IsAvailable": true
+    },
+    {
+        "MovieID": "M016",
+        "Title": "Canvas of Dreams",
+        "Director": "Jasmine Hall",
+        "Genre": "Romance",
+        "ReleaseYear": 2019,
+        "Rating": 6.8,
+        "IsAvailable": true
+    },
+    {
+        "MovieID": "M017",
+        "Title": "Cyber Drift",
+        "Director": "Rafael Sato",
+        "Genre": "Cyberpunk",
+        "ReleaseYear": 2022,
+        "Rating": 7.9,
+        "IsAvailable": true
+    },
+    {
+        "MovieID": "M018",
+        "Title": "Frozen Ashes",
+        "Director": "Greta Novak",
+        "Genre": "Adventure",
+        "ReleaseYear": 2021,
+        "Rating": 7.3,
+        "IsAvailable": true
+    }
+]

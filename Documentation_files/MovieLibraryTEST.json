@@ -1,0 +1,146 @@
+[
+  {
+    "MovieID": "M001",
+    "Title": "Echoes of the Past",
+    "Director": "Sarah Whitmore",
+    "Genre": "Drama",
+    "ReleaseYear": 2015,
+    "IsAvailable": true
+  },
+  {
+    "MovieID": "M002",
+    "Title": "Quantum Run",
+    "Director": "David Linhart",
+    "Genre": "Sci-Fi",
+    "ReleaseYear": 2022,
+    "IsAvailable": true
+  },
+  {
+    "MovieID": "M003",
+    "Title": "Love and Lattes",
+    "Director": "Mia Rodriguez",
+    "Genre": "Romance",
+    "ReleaseYear": 2019,
+    "IsAvailable": true
+  },
+  {
+    "MovieID": "M004",
+    "Title": "The Crimson Hunt",
+    "Director": "Marcus Flynn",
+    "Genre": "Action",
+    "ReleaseYear": 2020,
+    "IsAvailable": true
+  },
+  {
+    "MovieID": "M005",
+    "Title": "Whispers in the Fog",
+    "Director": "Evelyn Hart",
+    "Genre": "Mystery",
+    "ReleaseYear": 2018,
+    "IsAvailable": true
+  },
+  {
+    "MovieID": "M006",
+    "Title": "Pixel Panic",
+    "Director": "Tomoko Arai",
+    "Genre": "Animation",
+    "ReleaseYear": 2021,
+    "IsAvailable": true
+  },
+  {
+    "MovieID": "M007",
+    "Title": "Behind Closed Doors",
+    "Director": "Gregory Shaw",
+    "Genre": "Thriller",
+    "ReleaseYear": 2016,
+    "IsAvailable": true
+  },
+  {
+    "MovieID": "M008",
+    "Title": "Notes of Freedom",
+    "Director": "Isabelle DuPont",
+    "Genre": "Musical",
+    "ReleaseYear": 2017,
+    "IsAvailable": true
+  },
+  {
+    "MovieID": "M009",
+    "Title": "Broken Circuit",
+    "Director": "Kenta Nakamura",
+    "Genre": "Cyberpunk",
+    "ReleaseYear": 2023,
+    "IsAvailable": true
+  },
+  {
+    "MovieID": "M010",
+    "Title": "Wilderness Bound",
+    "Director": "Laura Chen",
+    "Genre": "Adventure",
+    "ReleaseYear": 2020,
+    "IsAvailable": true
+  },
+  {
+    "MovieID": "M011",
+    "Title": "Neon Skies",
+    "Director": "Julian Park",
+    "Genre": "Sci-Fi",
+    "ReleaseYear": 2021,
+    "IsAvailable": true
+  },
+  {
+    "MovieID": "M012",
+    "Title": "The Glass Garden",
+    "Director": "Amelia Clarke",
+    "Genre": "Drama",
+    "ReleaseYear": 2016,
+    "IsAvailable": true
+  },
+  {
+    "MovieID": "M013",
+    "Title": "Signal Lost",
+    "Director": "Kenji Matsuda",
+    "Genre": "Thriller",
+    "ReleaseYear": 2020,
+    "IsAvailable": true
+  },
+  {
+    "MovieID": "M014",
+    "Title": "The Fifth Petal",
+    "Director": "Nora Benitez",
+    "Genre": "Mystery",
+    "ReleaseYear": 2018,
+    "IsAvailable": true
+  },
+  {
+    "MovieID": "M015",
+    "Title": "Mech Town",
+    "Director": "Tony Waller",
+    "Genre": "Action",
+    "ReleaseYear": 2023,
+    "IsAvailable": true
+  },
+  {
+    "MovieID": "M016",
+    "Title": "Canvas of Dreams",
+    "Director": "Jasmine Hall",
+    "Genre": "Romance",
+    "ReleaseYear": 2019,
+    "IsAvailable": true
+  },
+  {
+    "MovieID": "M017",
+    "Title": "Cyber Drift",
+    "Director": "Rafael Sato",
+    "Genre": "Cyberpunk",
+    "ReleaseYear": 2022,
+    "IsAvailable": true
+  },
+  {
+    "MovieID": "M018",
+    "Title": "Frozen Ashes",
+    "Director": "Greta Novak",
+    "Genre": "Adventure",
+    "ReleaseYear": 2021,
+    "IsAvailable": true
+  }
+]
