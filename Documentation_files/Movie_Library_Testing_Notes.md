@@ -1,18 +1,13 @@
-# 🎯 Movie Library Testing Documentation
+# Movie Library Testing Documentation
 
 **Author:** Logan Young  
-**Date:** 2025-05-11  
-**Test Framework:** xUnit (for C# backend)  
-**UI Testing:** Manual verification with screenshots
 
----
-
-## ✅ 1. Unit Tests (xUnit)
+## 1. Unit Tests (xUnit)
 
 **Test Class:** `MovieLibraryTests.cs`  
 **Project:** `MOVIE_APPLICATION_APA1.Tests`
 
-### 🧪 Core Functional Tests
+###  Core Functional Tests
 
 | Test Name | Description | Result |
 |-----------|-------------|--------|
@@ -27,7 +22,7 @@
 
 ---
 
-### ⚠️ Edge & Boundary Tests
+### Edge & Boundary Tests
 
 | Test Name | Description | Result |
 |-----------|-------------|--------|
@@ -39,7 +34,7 @@
 
 ---
 
-## 🧪 2. Example Test Snippet
+## 2. Example Test Snippet
 
 ```csharp
 [Fact]
@@ -58,7 +53,7 @@ public void BorrowMovie_WhenUnavailable_ShouldQueueUser()
 
 ---
 
-## 🧪 3. Manual UI Test Cases
+## 3. Manual UI Test Cases
 
 | Case ID | Description | Steps | Expected Result | Actual Result | Screenshot |
 |---------|-------------|-------|------------------|----------------|------------|
@@ -68,11 +63,9 @@ public void BorrowMovie_WhenUnavailable_ShouldQueueUser()
 | UI-04 | Return Movie (Queue Empty) | Select borrowed movie, click "Return" | Marked as available | ✅ | Screenshot_04.png |
 | UI-05 | Import Movies from JSON | Click "Import JSON", select file | 8 new movies added | ✅ | Screenshot_05.png |
 
-> 📷 Be sure to capture screenshots of each test for submission/documentation.
-
 ---
 
-## ✅ Tools Used
+## Tools Used
 
 - **xUnit** for unit testing logic
 - **Visual Studio** / **dotnet CLI** for test execution
@@ -80,7 +73,7 @@ public void BorrowMovie_WhenUnavailable_ShouldQueueUser()
 
 ---
 
-## ✅ Run Tests via CLI
+## Run Tests via CLI
 
 ```bash
 dotnet test
@@ -88,12 +81,10 @@ dotnet test
 
 ---
 
-## ✅ Notes
+## Notes
 
 - Logic is validated both by automated and manual means
 - Coverage includes edge cases and misuse handling
 - JSON import/export makes validation easier across sessions
 
 ---
-
-Let me know if you want to automate UI testing next or package the whole solution for hand-in!
