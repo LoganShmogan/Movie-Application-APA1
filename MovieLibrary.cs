@@ -9,6 +9,28 @@ namespace MOVIE_APPLICATION_APA1
         public Dictionary<string, Movie> MovieLookup = new();
         public Dictionary<string, Queue<string>> BorrowQueue = new();
 
+        public MovieLibrary(bool skipSeedData = false)
+        {
+            if (!skipSeedData)
+            {
+                SeedSampleData();
+            }
+        }
+
+        private void SeedSampleData()
+        {
+            AddMovie(new Movie { MovieID = "M001", Title = "Echoes of the Past", Genre = "Drama", ReleaseYear = 2015, Director = "Sarah Whitmore" });
+            AddMovie(new Movie { MovieID = "M002", Title = "Quantum Run", Genre = "Sci-Fi", ReleaseYear = 2022, Director = "David Linhart" });
+            AddMovie(new Movie { MovieID = "M003", Title = "Love and Lattes", Genre = "Romance", ReleaseYear = 2019, Director = "Mia Rodriguez" });
+            AddMovie(new Movie { MovieID = "M004", Title = "The Crimson Hunt", Genre = "Action", ReleaseYear = 2020, Director = "Marcus Flynn" });
+            AddMovie(new Movie { MovieID = "M005", Title = "Whispers in the Fog", Genre = "Mystery", ReleaseYear = 2018, Director = "Evelyn Hart" });
+            AddMovie(new Movie { MovieID = "M006", Title = "Pixel Panic", Genre = "Animation", ReleaseYear = 2021, Director = "Tomoko Arai" });
+            AddMovie(new Movie { MovieID = "M007", Title = "Behind Closed Doors", Genre = "Thriller", ReleaseYear = 2016, Director = "Gregory Shaw" });
+            AddMovie(new Movie { MovieID = "M008", Title = "Notes of Freedom", Genre = "Musical", ReleaseYear = 2017, Director = "Isabelle DuPont" });
+            AddMovie(new Movie { MovieID = "M009", Title = "Broken Circuit", Genre = "Cyberpunk", ReleaseYear = 2023, Director = "Kenta Nakamura" });
+            AddMovie(new Movie { MovieID = "M010", Title = "Wilderness Bound", Genre = "Adventure", ReleaseYear = 2020, Director = "Laura Chen" });
+        }
+
         public void AddMovie(Movie movie)
         {
             if (!MovieLookup.ContainsKey(movie.MovieID))
@@ -66,5 +88,53 @@ namespace MOVIE_APPLICATION_APA1
             result.AddRange(right);
             return result;
         }
+
+        public MovieLibrary()
+        {
+            AddMovie(new Movie { MovieID = "M001", Title = "Echoes of the Past", Genre = "Drama", ReleaseYear = 2015, Director = "Sarah Whitmore" });
+            AddMovie(new Movie { MovieID = "M002", Title = "Quantum Run", Genre = "Sci-Fi", ReleaseYear = 2022, Director = "David Linhart" });
+            AddMovie(new Movie { MovieID = "M003", Title = "Love and Lattes", Genre = "Romance", ReleaseYear = 2019, Director = "Mia Rodriguez" });
+            AddMovie(new Movie { MovieID = "M004", Title = "The Crimson Hunt", Genre = "Action", ReleaseYear = 2020, Director = "Marcus Flynn" });
+            AddMovie(new Movie { MovieID = "M005", Title = "Whispers in the Fog", Genre = "Mystery", ReleaseYear = 2018, Director = "Evelyn Hart" });
+            AddMovie(new Movie { MovieID = "M006", Title = "Pixel Panic", Genre = "Animation", ReleaseYear = 2021, Director = "Tomoko Arai" });
+            AddMovie(new Movie { MovieID = "M007", Title = "Behind Closed Doors", Genre = "Thriller", ReleaseYear = 2016, Director = "Gregory Shaw" });
+            AddMovie(new Movie { MovieID = "M008", Title = "Notes of Freedom", Genre = "Musical", ReleaseYear = 2017, Director = "Isabelle DuPont" });
+            AddMovie(new Movie { MovieID = "M009", Title = "Broken Circuit", Genre = "Cyberpunk", ReleaseYear = 2023, Director = "Kenta Nakamura" });
+            AddMovie(new Movie { MovieID = "M010", Title = "Wilderness Bound", Genre = "Adventure", ReleaseYear = 2020, Director = "Laura Chen" });
+        }
+
+        public bool BorrowMovie(string movieID, string user)
+        {
+            if (MovieLookup.TryGetValue(movieID, out var movie))
+            {
+                if (movie.IsAvailable)
+                {
+                    movie.IsAvailable = false;
+                    return true;
+                }
+                else
+                {
+                    BorrowQueue[movieID].Enqueue(user);
+                    return false;
+                }
+            }
+            return false;
+        }
+
+        public void ReturnMovie(string movieID)
+        {
+            if (MovieLookup.TryGetValue(movieID, out var movie))
+            {
+                if (BorrowQueue[movieID].Any())
+                {
+                    string nextUser = BorrowQueue[movieID].Dequeue();
+                }
+                else
+                {
+                    movie.IsAvailable = true;
+                }
+            }
+        }
+
     }
 }

@@ -1,11 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Windows;
+using System.Linq;
 
 namespace MOVIE_APPLICATION_APA1
 {
     public partial class MainWindow : Window
     {
         private readonly MovieLibrary _library = new();
+        private MovieLibrary movieLibrary = new MovieLibrary();
+
 
         public MainWindow()
         {
@@ -57,20 +60,30 @@ namespace MOVIE_APPLICATION_APA1
 
         private void BorrowMovie_Click(object sender, RoutedEventArgs e)
         {
-            if (MovieGrid.SelectedItem is Movie selected && selected.IsAvailable)
+            if (MovieGrid.SelectedItem is Movie selectedMovie)
             {
-                selected.IsAvailable = false;
-                RefreshMovieGrid();
+                string currentUser = "demoUser"; // Replace with real user input if needed
+                bool success = movieLibrary.BorrowMovie(selectedMovie.MovieID, currentUser);
+                MessageBox.Show(success ? "Movie borrowed successfully!" : "Movie is already borrowed. You've been added to the queue.");
+                RefreshMovieList();
             }
         }
 
         private void ReturnMovie_Click(object sender, RoutedEventArgs e)
         {
-            if (MovieGrid.SelectedItem is Movie selected && !selected.IsAvailable)
+            if (MovieGrid.SelectedItem is Movie selectedMovie)
             {
-                selected.IsAvailable = true;
-                RefreshMovieGrid();
+                movieLibrary.ReturnMovie(selectedMovie.MovieID);
+                MessageBox.Show("Movie returned.");
+                RefreshMovieList();
             }
         }
+
+        private void RefreshMovieList()
+        {
+            MovieGrid.ItemsSource = null;
+            MovieGrid.ItemsSource = movieLibrary.MovieCollection.ToList();
+        }
+
     }
 }
